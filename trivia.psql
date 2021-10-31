@@ -1,0 +1,49 @@
+--
+-- PostgreSQL database dump
+--
+
+--
+-- Name: questions; Type: TABLE; Owner: postgres
+--
+
+CREATE TABLE questions (
+    id SERIAL PRIMARY KEY,
+    question VARCHAR(240),
+    answers text[],
+    correct integer
+);
+
+
+ALTER TABLE questions OWNER TO postgres;
+
+
+--
+-- Data for Name: questions; Type: TABLE DATA; Owner: postgres
+--
+
+INSERT INTO questions(question, answers, correct) VALUES
+('Whose autobiography is entitled "I Know Why the Caged Bird Sings"?','{"Maya Angelou", "Malala Yousafzai", "Michelle Obama", "Martin Luther King Jr."}',0),
+('What boxers original name is Cassius Clay?','{"Muhammad Ali", "Floyd Mayweather", "Mike Tyson"}',0),
+('What movie earned Tom Hanks his third straight Oscar nomination, in 1996?','{"Apollo 13", "Forrest Gump", "Saving Private Ryan"}',0),
+('What actor did author Anne Rice first denounce, then praise in the role of her beloved Lestat?','{"Tom Cruise", "Brad Pitt", "Leonardo DiCaprio"}',0),
+('What was the title of the 1990 fantasy directed by Tim Burton about a young man with multi-bladed appendages?','{"Edward Scissorhands", "Sleepy Hollow", "Mars Attacks"}',0),
+('Which is the only team to play in every soccer World Cup tournament?','{"Brazil", "Spain" ,"England"}',0),
+('Which country won the first ever soccer World Cup in 1930?','{"Uruguay", "Brazil", "Paraguay"}',0),
+('Who invented Peanut Butter?','{"George Washington Carver", "Henry Ford", "John Logie Baird"}',0),
+('What is the largest lake in Africa?','{"Lake Tanganyika", "Lake Victoria", "Lake Edward"}',1),
+('In which royal palace would you find the Hall of Mirrors?','{"Buckingham Palace", "Windsor Castle", "The Palace of Versailles"}',2),
+('The Taj Mahal is located in which Indian city?','{"Mumbai", "Agra", "Chennai"}',1),
+('Which Dutch graphic artist–initials M C was a creator of optical illusions?','{"Escher", "Vermeer", "Kooning"}',0),
+('La Giaconda is better known as what?','{"Frida Kahlo", "Lady Ermin", "Mona Lisa"}',2),
+('How many paintings did Van Gogh sell in his lifetime?','{"Zero", "Two", "One"}',2),
+('Which American artist was a pioneer of Abstract Expressionism, and a leading exponent of action painting?','{"Jeff Koons", "Jackson Pollock", "Keith Haring"}',1),
+('What is the heaviest organ in the human body?','{"The Brain", "The Liver", "The Lungs"}',1),
+('Who discovered penicillin?','{"Louis Pasteur", "Robert Koch", "Alexander Fleming"}',2),
+('Hematology is a branch of medicine involving the study of what?','{"Blood", "Skin", "Edible Plants"}',0),
+('Which dung beetle was worshipped by the ancient Egyptians?','{"Hercules", "Scarab", "Golden"}',1)
+
+
+
+--
+-- PostgreSQL database dump complete
+--
